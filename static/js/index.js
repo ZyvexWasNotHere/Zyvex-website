@@ -1,3 +1,4 @@
+console.log(document.querySelector(".menu-btn"));
 const skills = document.querySelectorAll(".skill-bar");
 
 const observer = new IntersectionObserver(entries => {
