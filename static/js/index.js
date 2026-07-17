@@ -26,24 +26,30 @@ skills.forEach(skill => {
 	observer.observe(skill);
 });
 
+
+// Mobile Menu
+
 const menuBtn = document.querySelector(".menu-btn");
 const mobileMenu = document.querySelector(".mobile-menu");
 
 
-menuBtn.addEventListener("click", () => {
+if (menuBtn && mobileMenu) {
 
-	mobileMenu.classList.toggle("active");
+	menuBtn.addEventListener("click", () => {
 
-});
-
-
-
-document.querySelectorAll(".mobile-menu a").forEach(link => {
-
-	link.addEventListener("click", () => {
-
-		mobileMenu.classList.remove("active");
+		mobileMenu.classList.toggle("active");
 
 	});
 
-});
+
+	document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+		link.addEventListener("click", () => {
+
+			mobileMenu.classList.remove("active");
+
+		});
+
+	});
+
+}
