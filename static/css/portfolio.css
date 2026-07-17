@@ -1064,3 +1064,11 @@ section {
   }
 
 }
+
+@media(max-width:500px) {
+
+  .scroll-down {
+    bottom: 100px;
+  }
+
+}
