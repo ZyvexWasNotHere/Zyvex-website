@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-left"></div>
+        <div class="nav-tabs">
+            <img src="{{ url_for('static', filename='images/Zyvex.png') }}" alt="Logo" class="nav-logo logo">
+            <a href="#home" class="nav-tab">Home</a>
+            <a href="#about" class="nav-tab">About</a>
+            <a href="#skills" class="nav-tab">Skills</a>
+            <a href="#projects" class="nav-tab">Projects</a>
+            <a href="#resume" class="nav-tab">Resume</a>
+            <a href="#contact" class="nav-tab">Contact</a>
+        </div>
+        <div class="nav-right"></div>
+    </nav>
+    <section id="home">
+        <div class="home">
+            <h1 class="home-name">Arad Kazemi</h1>
+            <h1 class="home-more">Frontend Developer</h1>
+        </div>
+        <div class="scroll-down">
+            <a href="#about"> ↓ </a>
+        </div>
+    </section>
+    <section id="about">
+        <h1>Who Am I ?</h1>
+        <p>I'm Arad, a passionate frontend developer who enjoys creating modern and user-friendly websites. I specialize
+            in building responsive interfaces using HTML, CSS, JavaScript and modern web technologies. I always try to
+            improve my skills and create projects that combine creativity and technology. </p>
+        <p>1+ Years Experience 10+ Projects Completed 5+ Technologies Learned </p>
+    </section>
+    <section id="skills">
+        <h1>My Skills</h1>
+        <!-- Technical Skills -->
+        <h2 class="skill-title">Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>HTML <span>90%</span>
+                </h3>
+                <div class="bar">
+                    <div class="progress blue skill-bar" data-height="90%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>CSS <span>85%</span>
+                </h3>
+                <div class="bar">
+                    <div class="progress blue skill-bar" data-height="85%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>JavaScript <span>55%</span>
+                </h3>
+                <div class="bar">
+                    <div class="progress green skill-bar" data-height="55%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Python <span>70%</span>
+                </h3>
+                <div class="bar">
+                    <div class="progress green skill-bar" data-height="70%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Flask <span>20%</span>
+                </h3>
+                <div class="bar">
+                    <div class="progress orange skill-bar" data-height="20%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>UI/UX <span>75%</span>
+                </h3>
+                <div class="bar">
+                    <div class="progress green skill-bar" data-height="75%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Git/GitHub <span>65%</span>
+                </h3>
+                <div class="bar">
+                    <div class="progress yellow skill-bar" data-height="65%"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Creative Skills -->
+        <h2 class="skill-title creative">Creative Skills</h2>
+        <div class="skills-container creative-container">
+            <div class="creative-skill">
+                <h3>🎸 Guitar</h3>
+                <p>6 Years Experience</p>
+            </div>
+            <div class="creative-skill">
+                <h3>🎮 Gaming</h3>
+                <p>4 Years Experience</p>
+            </div>
+            <div class="creative-skill">
+                <h3>🎬 Video Editing</h3>
+                <p>3 Years Experience</p>
+            </div>
+            <div class="creative-skill">
+                <h3>📹 Content Creation</h3>
+                <p>YouTube Creator • Video Production • Digital Content</p>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h1>My Projects</h1>
+        <div class="projects-container">
+            <!-- Minecraft Server -->
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='images/minecraft-server.png') }}" alt="Minecraft Server">
+                <div class="project-info">
+                    <h2>🎮 Minecraft Server</h2>
+                    <p> A custom Minecraft server with plugins, economy system, ranks and multiplayer features. </p>
+                    <span class="status completed"> Completed </span>
+                    <button> View Screenshots </button>
+                </div>
+            </div>
+            <!-- Resource Pack -->
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='images/resource-pack.png') }}" alt="Resource Pack">
+                <div class="project-info">
+                    <h2>🖌️ Minecraft Resource Pack</h2>
+                    <p> A custom Minecraft resource pack designed with unique textures and styles. </p>
+                    <span class="status completed"> Completed </span>
+                    <button> Preview </button>
+                </div>
+            </div>
+            <!-- School Website -->
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='images/school-site.png') }}" alt="School Website">
+                <div class="project-info">
+                    <h2>🏫 School Registration Website</h2>
+                    <p> A registration website project built with Flask, HTML and CSS. </p>
+                    <span class="status unfinished"> Discontinued </span>
+                    <button> View Details </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
