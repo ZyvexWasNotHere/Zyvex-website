@@ -31,6 +31,8 @@ body {
 
 /* ================= NAVBAR ================= */
 
+/* ================= NAVBAR ================= */
+
 .navbar {
   position: fixed;
 
@@ -68,27 +70,20 @@ body {
 
 
 .logo {
-
   height: 45px;
-
   width: auto;
-
 }
 
 
 .nav-tabs {
-
   display: flex;
-
   gap: 30px;
-
   align-items: center;
-
 }
+
 
 .nav-tab {
   color: #ccc;
-
   text-decoration: none;
 
   padding: 10px 15px;
@@ -99,18 +94,43 @@ body {
 
   font-weight: 500;
 
-  transition: 0.3s;
+  transition: .3s;
 
   position: relative;
 }
 
+
+.nav-tab:hover {
+  color: white;
+  background: rgba(139, 92, 246, .2);
+}
+
+
+
+/* ================= MOBILE MENU BUTTON ================= */
+
+.menu-btn {
+
+  display: none;
+
+  background: none;
+
+  border: none;
+
+  color: white;
+
+  font-size: 32px;
+
+  cursor: pointer;
+
+}
 
 .nav-tab:hover,
 .nav-tab.active {
 
   color: white;
 
-  background: rgba(139,92,246,0.2);
+  background: rgba(139, 92, 246, 0.2);
 
   transform: scale(1.05);
 
@@ -119,21 +139,21 @@ body {
 
 .nav-tab::after {
 
-  content:"";
+  content: "";
 
-  position:absolute;
+  position: absolute;
 
-  bottom:0;
+  bottom: 0;
 
-  right:50%;
+  right: 50%;
 
-  width:0;
+  width: 0;
 
-  height:2px;
+  height: 2px;
 
-  background:#8b5cf6;
+  background: #8b5cf6;
 
-  transition:.3s;
+  transition: .3s;
 
 }
 
@@ -141,9 +161,9 @@ body {
 .nav-tab:hover::after,
 .nav-tab.active::after {
 
-  width:100%;
+  width: 100%;
 
-  right:0;
+  right: 0;
 
 }
 
@@ -393,6 +413,45 @@ section {
 }
 
 /* ================= MOBILE ================= */
+
+@media(max-width:800px) {
+
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+
+  .nav-content {
+
+    width: 100%;
+
+    justify-content: space-between;
+
+  }
+
+
+  .nav-tabs {
+
+    display: none;
+
+  }
+
+
+  .menu-btn {
+
+    display: block;
+
+  }
+
+
+  .logo {
+
+    height: 40px;
+
+  }
+
+}
 
 @media (max-width: 800px) {
   .nav-tabs {
@@ -1012,14 +1071,48 @@ section {
 
 }
 
-@media(max-width:800px){
+@media(max-width:800px) {
 
-.nav-content{
+  .nav-content {
 
-  width:100%;
+    width: 100%;
 
-  justify-content:space-between;
+    justify-content: space-between;
+
+  }
 
 }
+
+/* MOBILE MENU FIX */
+
+@media(max-width:800px){
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav-content {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-tabs {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+  }
+
+  .logo {
+    height: 40px;
+  }
 
 }
