@@ -1024,3 +1024,43 @@ section {
   }
 
 }
+
+/* ================= MOBILE SKILLS GRID ================= */
+
+@media(max-width:500px) {
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px 15px;
+    width: 100%;
+    overflow: visible;
+  }
+
+
+  .skill {
+    width: auto;
+  }
+
+
+  .bar {
+    width: 25px;
+    height: 170px;
+  }
+
+}
+
+@media(max-width:500px) {
+
+  .creative-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+
+  .creative-skill {
+    width: 100%;
+    min-height: 150px;
+  }
+
+}
