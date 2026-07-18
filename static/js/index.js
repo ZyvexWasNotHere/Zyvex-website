@@ -54,3 +54,89 @@ if (menuBtn && mobileMenu) {
 	});
 
 }
+
+function changeLanguage(lang) {
+
+	const elements = document.querySelectorAll("[data-en]");
+
+	elements.forEach(element => {
+
+		if (lang === "fa") {
+			element.innerHTML = element.getAttribute("data-fa");
+		}
+		else {
+			element.innerHTML = element.getAttribute("data-en");
+		}
+
+	});
+
+
+	document.documentElement.lang = lang;
+
+
+	if (lang === "fa") {
+
+		document.body.style.direction = "rtl";
+		langBtn.innerHTML = "EN";
+
+	} else {
+
+		document.body.style.direction = "ltr";
+		langBtn.innerHTML = "FA";
+
+	}
+
+
+	localStorage.setItem("lang", lang);
+
+}
+
+const langBtn = document.getElementById("lang-btn");
+
+let currentLang = localStorage.getItem("lang") || "en";
+
+const languageLoader = document.querySelector(".language-loader");
+
+
+langBtn.addEventListener("click", () => {
+
+
+	languageLoader.classList.add("active");
+
+	document.body.style.opacity = "0";
+
+	setTimeout(() => {
+
+
+		if (currentLang === "en") {
+
+			currentLang = "fa";
+
+		} else {
+
+			currentLang = "en";
+
+		}
+
+
+		changeLanguage(currentLang);
+
+
+
+		setTimeout(() => {
+
+
+			languageLoader.classList.remove("active");
+
+
+		}, 180);
+
+
+
+	}, 220);
+
+
+});
+
+// اجرای اولیه
+changeLanguage(currentLang);

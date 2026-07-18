@@ -7,6 +7,10 @@
     <title>Index</title>
     <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -17,14 +21,17 @@
             <img src="{{ url_for('static', filename='images/Zyvex.png') }}" alt="Logo" class="logo">
 
             <div class="nav-tabs">
-                <a href="#home" class="nav-tab">Home</a>
-                <a href="#about" class="nav-tab">About</a>
-                <a href="#skills" class="nav-tab">Skills</a>
-                <a href="#projects" class="nav-tab">Projects</a>
-                <a href="#resume" class="nav-tab">Resume</a>
-                <a href="#contact" class="nav-tab">Contact</a>
-            </div>
+                <a href="#home" class="nav-tab" data-en="Home" data-fa="خانه">Home</a>
+                <a href="#about" class="nav-tab" data-en="About" data-fa="درباره">About</a>
+                <a href="#skills" class="nav-tab" data-en="Skills" data-fa="مهارت ها">Skills</a>
+                <a href="#projects" class="nav-tab" data-en="Project" data-fa="پروژه ها">Projects</a>
+                <a href="#resume" class="nav-tab" data-en="Resume" data-fa="رزومه">Resume</a>
+                <a href="#contact" class="nav-tab" data-en="Contact" data-fa="تماس">Contact</a>
 
+                <button class="lang-btn nav-tab" id="lang-btn">
+                    فارسی/EN
+                </button>
+            </div>
 
             <!-- Mobile Button -->
             <button class="menu-btn">
@@ -39,51 +46,56 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu">
 
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" data-en="Home" data-fa="خانه">Home</a>
+        <a href="#about" data-en="About" data-fa="درباره">About</a>
+        <a href="#skills" data-en="Skills" data-fa="مهارت ها">Skills</a>
+        <a href="#projects" data-en="Projects" data-fa="پروژه ها">Projects</a>
+        <a href="#resume" data-en="Resume" data-fa="رزومه">Resume</a>
+        <a href="#contact" data-en="Contact" data-fa="تماس">Contact</a>
 
     </div>
     <section id="home">
         <div class="home">
-            <h1 class="home-name">Arad Kazemi</h1>
-            <h1 class="home-more">Frontend Developer</h1>
+            <h1 class="home-name" data-en="Arad Kazemi" data-fa="آراد کاظمی">Arad Kazemi</h1>
+            <h1 class="home-more" data-en="Frontend Developer" data-fa="توسعه دهنده فرانت اند">Frontend Developer</h1>
         </div>
         <div class="scroll-down">
             <a href="#about"> ↓ </a>
         </div>
     </section>
     <section id="about">
-        <h1>Who Am I ?</h1>
-        <p>I'm Arad, a passionate frontend developer who enjoys creating modern and user-friendly websites. I specialize
+        <h1 data-en="Who Am I ?" data-fa="من کی هستم؟">Who Am I ?</h1>
+        <p data-en="I'm Arad, a passionate frontend developer who enjoys creating modern and user-friendly websites. I specialize
+            in building responsive interfaces using HTML, CSS, JavaScript and modern web technologies. I always try to
+            improve my skills and create projects that combine creativity and technology. " data-fa="من آراد هستم، یک توسعه‌دهنده فرانت‌اند (Frontend) مشتاق که از خلق وب‌سایت‌های مدرن و کاربرپسند لذت می‌برم. تخصص من
+            ساخت رابط‌های کاربری واکنش‌گرا (Responsive) با استفاده از HTML، CSS، JavaScript و فناوری‌های مدرن وب است. من همواره تلاش می‌کنم
+            مهارت‌هایم را ارتقا دهم و پروژه‌هایی خلق کنم که ترکیبی از خلاقیت و فناوری باشند.">I'm Arad, a passionate
+            frontend developer who enjoys creating modern and user-friendly websites. I specialize
             in building responsive interfaces using HTML, CSS, JavaScript and modern web technologies. I always try to
             improve my skills and create projects that combine creativity and technology. </p>
         <div class="stats">
 
             <div class="stat">
-                <h2>1+</h2>
-                <p>Years Experience</p>
+                <h2 data-en="1+" data-fa="+1">1+</h2>
+                <p data-en="Years Experience" data-fa="سال تجربه">Years Experience</p>
             </div>
 
             <div class="stat">
-                <h2>10+</h2>
-                <p>Projects Completed</p>
+                <h2 data-en="10+" data-fa="+10">10+</h2>
+                <p data-en="Projects Completed" data-fa="پروژه کامل شده">Projects Completed</p>
             </div>
 
             <div class="stat">
-                <h2>5+</h2>
-                <p>Technologies Learned</p>
+                <h2 data-en="5+" data-fa="+5">5+</h2>
+                <p data-en="Technologies Learned" data-fa="فناوری آموخته شده">Technologies Learned</p>
             </div>
 
         </div>
     </section>
     <section id="skills">
-        <h1>My Skills</h1>
+        <h1 data-en="My Skills" data-fa="مهارت های من">My Skills</h1>
         <!-- Technical Skills -->
-        <h2 class="skill-title">Technical Skills</h2>
+        <h2 class="skill-title" data-en="Technical Skills" data-fa="مهارت های فنی">Technical Skills</h2>
         <div class="skills-container">
             <div class="skill">
                 <h3>HTML <span>90%</span>
@@ -136,61 +148,77 @@
             </div>
         </div>
         <!-- Creative Skills -->
-        <h2 class="skill-title creative">Creative Skills</h2>
+        <h2 class="skill-title creative" data-en="Creative Skills" data-fa="مهارت‌های خلاقانه">Creative Skills</h2>
         <div class="skills-container creative-container">
             <div class="creative-skill">
-                <h3>🎸 Guitar</h3>
-                <p>6 Years Experience</p>
+                <h3 data-en="🎸 Guitar" data-fa="🎸گیتار">🎸 Guitar</h3>
+                <p data-en="6 Years Experience" data-fa="6 سال تجربه">6 Years Experience</p>
             </div>
             <div class="creative-skill">
-                <h3>🎮 Gaming</h3>
-                <p>4 Years Experience</p>
+                <h3 data-en="🎮 Gaming" data-fa="🎮بازی های ویدیویی">🎮 Gaming</h3>
+                <p data-en="4 Years Experience" data-fa="4 سال تجربه">4 Years Experience</p>
             </div>
             <div class="creative-skill">
-                <h3>🎬 Video Editing</h3>
-                <p>3 Years Experience</p>
+                <h3 data-en="🎬 Video Editing" data-fa="🎬 ادیت ویدیو">🎬 Video Editing</h3>
+                <p data-en="3 Years Experience" data-fa="3 سال تجربه">3 Years Experience</p>
             </div>
             <div class="creative-skill">
-                <h3>📹 Content Creation</h3>
-                <p>YouTube Creator • Video Production • Digital Content</p>
+                <h3 data-en="📹 Content Creation" data-fa="📹 تولید محتوا">📹 Content Creation</h3>
+                <p data-en="YouTube Creator • Video Production • Digital Content"
+                    data-fa="تولیدکننده محتوا در یوتیوب • تولید ویدیو • محتوای دیجیتال">YouTube Creator • Video
+                    Production • Digital Content</p>
             </div>
         </div>
     </section>
     <section id="projects">
-        <h1>My Projects</h1>
+        <h1 data-en="My Projects" data-fa="پروژه های من">My Projects</h1>
         <div class="projects-container">
             <!-- Minecraft Server -->
             <div class="project-card">
                 <img src="{{ url_for('static', filename='images/minecraft-server.png') }}" alt="Minecraft Server">
                 <div class="project-info">
-                    <h2>🎮 Minecraft Server</h2>
-                    <p> A custom Minecraft server with plugins, economy system, ranks and multiplayer features. </p>
-                    <span class="status completed"> Completed </span>
-                    <button> View Screenshots </button>
+                    <h2 data-en="🎮 Minecraft Server" data-fa="سرور ماینکرفت">🎮 Minecraft Server</h2>
+                    <p data-en=" A custom Minecraft server with plugins, economy system, ranks and multiplayer features. "
+                        data-fa="یک سرور اختصاصی ماینکرفت همراه با پلاگین‌ها، سیستم اقتصادی، رتبه‌بندی و قابلیت‌های چندنفره.">
+                        A custom Minecraft server with plugins, economy system, ranks and multiplayer features. </p>
+                    <span class="status completed" data-en="Completed" data-fa="کامل شده"> Completed </span>
+                    <button data-en=" View Screenshots " data-fa="دیدن اسکرین شات"> View Screenshots </button>
                 </div>
             </div>
             <!-- Resource Pack -->
             <div class="project-card">
                 <img src="{{ url_for('static', filename='images/resource-pack.png') }}" alt="Resource Pack">
                 <div class="project-info">
-                    <h2>🖌️ Minecraft Resource Pack</h2>
-                    <p> A custom Minecraft resource pack designed with unique textures and styles. </p>
-                    <span class="status completed"> Completed </span>
-                    <button> Preview </button>
+                    <h2 data-en="🖌️ Minecraft Resource Pack" data-fa="🖌️ریسورس پک ماینکرفت">🖌️ Minecraft Resource
+                        Pack</h2>
+                    <p data-en=" A custom Minecraft resource pack designed with unique textures and styles. "
+                        data-fa=" یک بسته منابع سفارشی برای ماینکرفت که با بافت‌ها و سبک‌های منحصر‌به‌فرد طراحی شده است.">
+                        A custom Minecraft resource pack designed with unique textures and styles. </p>
+                    <span class="status completed" data-en="Completed" data-fa="کامل شده"> Completed </span>
+                    <button data-en=" Preview " data-fa=" پیش‌ نمایش "> Preview </button>
                 </div>
             </div>
             <!-- School Website -->
             <div class="project-card">
                 <img src="{{ url_for('static', filename='images/school-site.png') }}" alt="School Website">
                 <div class="project-info">
-                    <h2>🏫 School Registration Website</h2>
-                    <p> A registration website project built with Flask, HTML and CSS. </p>
-                    <span class="status unfinished"> Discontinued </span>
-                    <button> View Details </button>
+                    <h2 data-en="🏫 School Registration Website" data-fa=" 🏫 وب‌سایت ثبت‌نام مدرسه ">🏫 School
+                        Registration Website</h2>
+                    <p data-en=" A registration website project built with Flask, HTML and CSS. "
+                        data-fa=" یک پروژه وب‌سایت ثبت‌نام که با Flask، HTML و CSS ساخته شده است. "> A registration
+                        website project built with Flask, HTML and CSS. </p>
+                    <span class="status unfinished" data-en=" Discontinued " data-fa=" تولید آن متوقف شده است ">
+                        Discontinued </span>
+                    <button data-en=" View Details " data-fa="مشاهده جزئیات"> View Details </button>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="language-loader">
+        <div class="loader-circle"></div>
+    </div>
+    
 </body>
 
 </html>
