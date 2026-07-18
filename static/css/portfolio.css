@@ -768,11 +768,18 @@ section {
     justify-content: space-between;
   }
 
-
   .nav-tabs {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-tabs .nav-tab:not(.lang-btn) {
     display: none;
   }
 
+  .nav-tabs .lang-btn {
+    display: block;
+  }
 
   .logo {
     height: 40px;
@@ -782,17 +789,14 @@ section {
   .menu-btn {
     display: block;
 
-    position: fixed;
-
-    right: 20px;
-    top: 14px;
+    position: relative;
 
     background: transparent;
     border: none;
 
     color: white;
 
-    font-size: 32px;
+    font-size: 30px;
 
     cursor: pointer;
 
@@ -927,6 +931,46 @@ section {
 
   }
 
+  .desktop-lang {
+    display: none;
+  }
+
+
+  .mobile-lang {
+
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: 20px;
+
+    font-size: 14px;
+
+  }
+
+
+  .nav-content {
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+  }
+
+
+  .logo {
+
+    height: 38px;
+
+  }
+
+
+  .menu-btn {
+
+    margin-left: 10px;
+
+  }
+
 }
 
 
@@ -963,6 +1007,38 @@ section {
 
     font-size: 38px;
 
+  }
+
+  .nav-tabs a {
+    display: none;
+  }
+
+  .nav-tabs .lang-btn {
+    display: block;
+  }
+
+  .nav-tabs {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .nav-tabs .lang-btn {
+    display: block;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .nav-tabs {
+    display: flex;
+  }
+
+  .nav-tabs .nav-tab:not(.lang-btn) {
+    display: none;
+  }
+
+  .nav-tabs .lang-btn {
+    display: block;
   }
 
 
@@ -1132,4 +1208,8 @@ body.fa .skill h3 span {
 
   }
 
+}
+
+.mobile-lang {
+  display: none;
 }
