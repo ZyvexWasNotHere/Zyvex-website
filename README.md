@@ -8,7 +8,7 @@ A modern personal portfolio website built with Flask, HTML, CSS and JavaScript.
 - 📱 Fully Responsive Design
 - 🎨 Modern UI with Glassmorphism
 - 📊 Animated Skill Bars
-- 🍔 Mobile Navigation Menu
+- 🔎 Navigation Bar
 - ⚡ Smooth Animations
 - 🌙 Dark Theme
 - 🚀 Fast Loading
