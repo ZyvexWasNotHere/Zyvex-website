@@ -93,3 +93,7 @@ def welcome():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+@app.route("/resume")
+def resume():
+    return render_template("resume.html")

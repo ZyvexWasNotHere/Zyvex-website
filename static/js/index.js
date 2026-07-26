@@ -140,3 +140,4 @@ langBtn.addEventListener("click", () => {
 
 // اجرای اولیه
 changeLanguage(currentLang);
+
