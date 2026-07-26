@@ -39,7 +39,7 @@ python app.py
 
 ## 📅 Version
 
-Current Version: **v2.2.3**
+Current Version: **v2.3.0**
 
 ## 👤 Author
 
