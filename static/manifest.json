@@ -1,0 +1,13 @@
+{
+  "name": "Zyvex",
+  "short_name": "Zyvex",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/static/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
